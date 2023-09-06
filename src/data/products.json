@@ -2,7 +2,7 @@
   {
     "id": 1,
     "image": "https://images.samsung.com/is/image/samsung/p6pim/ar/lu32r590cwlxzb/gallery/ar-ur59c-lu32r590cwlxzb-533936087?$650_519_PNG$",
-    "name": "Monitor Samsung 60hz | Curvo",
+    "name": "Monitor Samsung Curvo | 60hz",
     "price": 119.999,
     "initial": 1,
     "stock": 8,
@@ -11,18 +11,8 @@
   },
   {
     "id": 2,
-    "image": "https://images.samsung.com/is/image/samsung/p6pim/ar/lf24t350fhlczb/gallery/ar-t35f-388813-lf24t350fhlczb-456991993?$650_519_PNG$",
-    "name": "Monitor Samsung 75hz",
-    "price": 144.999,
-    "initial": 1,
-    "stock": 7,
-    "category": "75",
-    "description": "Este monitor de 27 pulgadas te va a resultar cómodo para estudiar, trabajar o ver una película en tus tiempos de ocio. Asimismo, su resolución de 1920 x 1080 te permite disfrutar de momentos únicos gracias a una imagen de alta fidelidad. Una de sus virtudes es que posee pantalla antirreflejo, de esta manera no verás reflejado lo que está detrás de vos y vas a evitar forzar tu vista para enfocar el contenido. Su tiempo de respuesta de 5 ms lo hace ideal para gamers y cinéfilos porque es capaz de mostrar imágenes en movimiento sin halos o bordes borrosos."
-  },
-  {
-    "id": 3,
     "image": "https://www.qloud.ar/SITES/IMG/joy-div-computers-09-2021/236_14-10-2022-06-10-58-221613_1.jpg",
-    "name": "Monitor LG 60hz",
+    "name": "Monitor Gamer LG | 60hz",
     "price": 148.999,
     "initial": 1,
     "stock": 7,
@@ -30,9 +20,9 @@
     "description": "Con tu pantalla LED no solo ahorrás energía, ya que su consumo es bajo, sino que vas a ver colores nítidos y definidos en tus películas o series favoritas. Asimismo, su resolución de 3840 x 2160 te permite disfrutar de momentos únicos gracias a una imagen de alta fidelidad. Una de sus virtudes es que posee pantalla antirreflejo, vas a evitar forzar tu vista para enfocar el contenido. Su tiempo de respuesta de 1 ms lo hace ideal para gamers y cinéfilos porque es capaz de mostrar imágenes en movimiento sin halos o bordes borrosos."
   },
   {
-    "id": 4,
+    "id": 3,
     "image": "https://www.fullh4rd.com.ar/img/productos/18/monitor-gamer-24-viewsonic-vx2418pmhd-fhd-dp-hdmi-165hz-1-0.jpg",
-    "name": "Monitor ViewSomic 60hz",
+    "name": "Monitor ViewSomic | 60hz",
     "price": 158.999,
     "initial": 1,
     "stock": 5,
@@ -40,29 +30,9 @@
     "description": "La función exclusiva ViewMode™ de ViewSonic ofrece ajustes preestablecidos de Juego, Película, Web, Texto y Mono. Estos ajustes preestablecidos mejoran la curva gamma, la temperatura del color, el contraste y el brillo para brindar una experiencia de visualización optimizada para diferentes aplicaciones de pantalla."
   },
   {
-    "id": 5,
-    "image": "https://mexx-img-2019.s3.amazonaws.com/39741_1.jpeg",
-    "name": "Monitor LG 75hz",
-    "price": 164.999,
-    "initial": 1,
-    "stock": 4,
-    "category": "75",
-    "description": "Pantalla IPS Full HD - Color Verdadero desde cualquier ángulo. La tecnología IPS destaca el rendimiento de las pantallas de cristal líquido. Los tiempos de respuesta se acortan, se mejora la reproducción del color y los usuarios pueden ver la pantalla prácticamente desde cualquier ángulo."
-  },
-  {
-    "id": 6,
-    "image": "https://http2.mlstatic.com/D_NQ_NP_718374-MLA46989986130_082021-O.webp",
-    "name": "Monitor senTey 75hz",
-    "price": 189.999,
-    "initial": 1,
-    "stock": 5,
-    "category": "75",
-    "description": "Protege tus ojos. La avanzada tecnología de confort ocular del T55 reduce la fatiga ocular para que las tareas de computación prolongadas resulten más cómodas. La tecnología antiparpadeo (Flicker Free) reduce constantemente el cansino e irritante parpadeo de la pantalla, mientras que el modo Desvcanso visual (Eye Saver) minimiza la luz azul emitida. Tus ojos se mantienen frescos durante más tiempo."
-  },
-  {
-    "id": 7,
+    "id": 4,
     "image": "https://s3-sa-east-1.amazonaws.com/saasargentina/KzxqxrgNaRopTQ2HSYqy/imagen",
-    "name": "Monitor senTey 144hz",
+    "name": "Monitor senTey | 144hz",
     "price": 234.999,
     "initial": 1,
     "stock": 6,
@@ -70,9 +40,9 @@
     "description": "Juego mucho más fluido con una frecuencia de actualización de 144 Hz. El tiempo de respuesta de 1 ms (MPRT) hace que los comandos sean tan rápidos como tus reflejos AMD FreeSync Premium hace que la acción ultrarrápida se vea perfecta"
   },
   {
-    "id": 8,
+    "id": 5,
     "image": "https://www.softcom.co.id/wp-content/uploads/2020/06/MONITOR-VG259QM-B.jpg",
-    "name": "Monitor Gamer Asus  144hz | Curvo",
+    "name": "Monitor Asus Curvo | 144hz",
     "price": 289.999,
     "initial": 1,
     "stock": 3,
@@ -80,9 +50,9 @@
     "description": "Sumérgete en una experiencia de juego inigualable con el Monitor gamer Asus TUF Gaming VG279QM de 27 pulgadas. Con una resolución Full HD de 1920x1080 píxeles y una frecuencia de actualización de 144 Hz, disfrutarás de imágenes nítidas y fluidas en cada partida. La pantalla LCD TFT con tecnologías G-Sync, Adaptive-Sync y ELMB Sync garantiza una sincronización perfecta entre tu computadora y el monitor, eliminando el desgarro y el parpadeo de la imagen. Además, su panel IPS ofrece ángulos de visión de 178° tanto horizontal como vertical, permitiéndote apreciar los colores vibrantes desde cualquier posición."
   },
   {
-    "id": 9,
+    "id": 6,
     "image": "https://static.lgimportados.com.py/upload/product/597135/monitor-led-27-napoli-npl-275-pro-full-hd-hdmi-vga-75hz-curvo-black.png",
-    "name": "Monitor LG 165hz",
+    "name": "Monitor LG | 165hz",
     "price": 329.999,
     "initial": 1,
     "stock": 2,
@@ -90,9 +60,9 @@
     "description": "Frecuencia de actualización de 165 Hz, movimiento de juego fluido. Cuenta con una velocidad ultrarrápida de 165 Hz permite a los jugadores ver el siguiente fotograma rápidamente y hace que la imagen aparezca sin problemas. Los jugadores pueden responder rápidamente a los oponentes y apuntar al objetivo fácilmente."
   },
   {
-    "id": 10,
+    "id": 7,
     "image": "https://images.samsung.com/is/image/samsung/p6pim/ar/ls27ag550elxzb/gallery/ar-odyssey-g5-g55a-407983-ls27ag550elxzb-530679334?$650_519_PNG$",
-    "name": "Monitor Samsung 165hz",
+    "name": "Monitor Samsung | 165hz",
     "price": 369.999,
     "initial": 1,
     "stock": 3,
@@ -100,9 +70,9 @@
     "description": "Samsung está fielmente comprometida en brindar productos de calidad y que contribuyan a crear un mejor futuro para las personas. Como empresa líder en la industria tecnológica uno de sus objetivos principales es desarrollar avanzadas e innovadoras soluciones. Es por ello que con este monitor de 165 Hz tendrás y disfrutarás de una gran experiencia visual en todo momento."
   },
   {
-    "id": 11,
+    "id": 8,
     "image": "https://mauricomputacion.com.ar/images/productos/21668.webp",
-    "name": "Monitor senTey 240hz",
+    "name": "Monitor senTey | 240hz",
     "price": 429.399,
     "initial": 1,
     "stock": 1,
@@ -110,9 +80,9 @@
     "description": "Tasa de refresco de 240Hz y 1ms de tiempo de respuesta, escenas a toda velocidad. La tasa de refresco de 240Hz elimina el retardo para ofrecerte un juego estimulante, con una acción ultrafluida. Sorprendé a tus enemigos con un tiempo de respuesta de 1ms y sin desenfoques en escena."
   },
   {
-    "id": 12,
+    "id": 9,
     "image": "https://centrale.cl/wp-content/uploads/prod-10687-image-4.jpeg",
-    "name": "Monitor ViewSonic 240hz",
+    "name": "Monitor ViewSonic | 240hz",
     "price": 549.999,
     "initial": 1,
     "stock": 4,
@@ -120,9 +90,9 @@
     "description": "Disfrutá de todas las cualidades que el monitor ViewSonic XG270 tiene para ofrecerte. Percibí las imágenes de una manera completamente diferente y complementá cualquier espacio ya sea en tu casa u oficina."
   },
   {
-    "id": 13,
+    "id": 10,
     "image": "https://http2.mlstatic.com/D_NQ_NP_990820-MLA50265715997_062022-O.webp",
-    "name": "Monitor Gamer Gigabyte 240hz",
+    "name": "Monitor Gigabyte | 240hz",
     "price": 619.499,
     "initial": 1,
     "stock": 2,
@@ -130,9 +100,9 @@
     "description": "Panel FHD de 24,5” (resolución de 1920 x 1080) en una relación de aspecto de 16:9 con una frecuencia de actualización de 240 Hz para juegos fluidos. El monitor AORUS Gaming utiliza los sistemas LED más avanzados, combinados con la potencia de RGB Fusion, tendrás el sistema más genial que todos envidian. ¡A través de la aplicación RGB Fusion, puedes crear un ambiente de juego único!"
   },
   {
-    "id": 14,
-    "image": "https://i.blogs.es/8fe76f/elite/1366_2000.jpeg",
-    "name": "Monitor ViewSonic Elite 360hz",
+    "id": 11,
+    "image": "https://www.buyitdirect.ie/Images/A1XG251G_2_Supersize.jpg?v=3",
+    "name": "Monitor ViewSonic | 360hz",
     "price": 909.999,
     "initial": 1,
     "stock": 2,
@@ -140,9 +110,9 @@
     "description": "Resolución Full HD 1080p, frecuencia de actualización ultrasensible de 360 Hz y tiempo de respuesta ultrarrápido de 1 ms le brindan la ventaja en todas sus búsquedas de juegos"
   },
   {
-    "id": 15,
+    "id": 12,
     "image": "https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/646611_372201_02_front_comping.jpg",
-    "name": "Monitor Gamer Asus ROG 360hz | Curvo",
+    "name": "Monitor Asus Curvo | 360hz ",
     "price": 989.999,
     "initial": 1,
     "stock": 3,

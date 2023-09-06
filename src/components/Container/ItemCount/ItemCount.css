@@ -29,3 +29,21 @@
   font-size: 80%;
   margin-bottom: 0;
 }
+
+@media (min-width: 768px) {
+  .div-counter {
+    font-size: 140%;
+  }
+
+  .p-counter {
+    margin: 0 10%;
+  }
+
+  .div-counter-2 {
+    margin: 4% 0 0;
+  }
+
+  .btns-counter {
+    margin: 0 2%;
+  }
+}

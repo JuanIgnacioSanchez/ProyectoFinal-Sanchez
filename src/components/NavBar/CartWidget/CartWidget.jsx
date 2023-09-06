@@ -1,4 +1,4 @@
-export function CartWidget() {
+function CartWidget() {
   return (
     <div>
       <div className="button button-outline-dark">
@@ -7,3 +7,5 @@ export function CartWidget() {
     </div>
   );
 }
+
+export default CartWidget;

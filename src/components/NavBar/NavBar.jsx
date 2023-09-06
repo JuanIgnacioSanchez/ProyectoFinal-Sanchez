@@ -1,25 +1,59 @@
-import { Navbar, Container, Nav } from "react-bootstrap";
-import { CartWidget } from "./CartWidget/CartWidget";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import CartWidget from "./CartWidget/CartWidget";
 import { Link } from "react-router-dom";
+import "./Navbar.css";
 
 const NavBar = () => {
   return (
-    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary w-100">
+    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
       <Container>
-        <Link to="/">Computing Word</Link>
+        <Link className="brand" to="/">
+          Computing World
+        </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Link to="/">Productos</Link>
-            <Link to="/category/60">60 Hz</Link>
-            <Link to="/category/75">75 Hz</Link>
-            <Link to="/category/144">144 Hz</Link>
-            <Link to="/category/165">165 Hz</Link>
-            <Link to="/category/240">240 Hz</Link>
-            <Link to="/category/360">360 Hz</Link>
+            <Link className="nav-links" to="/">
+              Inicio
+            </Link>
+            <Link className="nav-links" to="#">
+              Nosotros
+            </Link>
+            <NavDropdown
+              className="nav-links"
+              title="Productos"
+              id="collasible-nav-dropdown"
+            >
+              <Link className="nav-links" to="/category/60">
+                60 Hz
+              </Link>
+              <hr className="hr" />
+              <Link className="nav-links" to="/category/144">
+                144 Hz
+              </Link>
+              <hr className="hr" />
+              <Link className="nav-links" to="/category/165">
+                165 Hz
+              </Link>
+              <hr className="hr" />
+              <Link className="nav-links" to="/category/240">
+                240 Hz
+              </Link>
+              <hr className="hr" />
+              <Link className="nav-links" to="/category/360">
+                360 Hz
+              </Link>
+              <NavDropdown.Divider />
+              <Link className="nav-links dropdown-nav" to="/">
+                Todos los productos
+              </Link>
+            </NavDropdown>
           </Nav>
-          <Nav>
-            <Link to="/cart">
+          <Nav className="div-cart">
+            <Link className="nav-links" to="/cart">
               <CartWidget />
             </Link>
           </Nav>
