@@ -5,20 +5,26 @@ import ItemListContainer from "./components/Container/ItemListContainer/ItemList
 import ItemDetailContainer from "./components/Container/ItemDetailContainer/ItemDetailContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Cart from "./components/Container/Cart/Cart";
+import { useState } from "react";
+import { CartContext } from "./components/Context/CartContext";
 
 function App() {
+  const [carrito, setCarrito] = useState([]);
+
   return (
-    <div>
-      <BrowserRouter>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<ItemListContainer />} />
-          <Route path="/item/:id" element={<ItemDetailContainer />} />
-          <Route path="/category/:cat" element={<ItemListContainer />} />
-          <Route path="/cart" element={<Cart />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <>
+      <CartContext.Provider value={{ carrito, setCarrito }}>
+        <BrowserRouter>
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<ItemListContainer />} />
+            <Route path="/item/:id" element={<ItemDetailContainer />} />
+            <Route path="/category/:cat" element={<ItemListContainer />} />
+            <Route path="/cart" element={<Cart />} />
+          </Routes>
+        </BrowserRouter>
+      </CartContext.Provider>
+    </>
   );
 }
 
