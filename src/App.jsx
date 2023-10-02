@@ -5,16 +5,16 @@ import ItemListContainer from "./components/Container/ItemListContainer/ItemList
 import ItemDetailContainer from "./components/Container/ItemDetailContainer/ItemDetailContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Cart from "./components/Container/Cart/Cart";
-import { useState } from "react";
-import { CartContext } from "./components/Context/CartContext";
+import { useContext } from "react";
+import CartContextProvider from "./context/CartContext";
 
 function App() {
-  const [carrito, setCarrito] = useState([]);
+  const context = useContext(CartContextProvider);
 
   return (
-    <>
-      <CartContext.Provider value={{ carrito, setCarrito }}>
-        <BrowserRouter>
+    <div>
+      <BrowserRouter>
+        <CartContextProvider>
           <NavBar />
           <Routes>
             <Route path="/" element={<ItemListContainer />} />
@@ -22,9 +22,9 @@ function App() {
             <Route path="/category/:cat" element={<ItemListContainer />} />
             <Route path="/cart" element={<Cart />} />
           </Routes>
-        </BrowserRouter>
-      </CartContext.Provider>
-    </>
+        </CartContextProvider>
+      </BrowserRouter>
+    </div>
   );
 }
 

@@ -2,14 +2,14 @@ import React, { useContext } from "react";
 import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
 import { Link } from "react-router-dom";
-import { CartContext } from "../../Context/CartContext";
+import CartContext from "../../../context/CartContext";
 
 const ItemDetail = (product) => {
-  const { carrito, setCarrito } = useContext(CartContext);
-  const agregarProductoCarrito = () => {
-    const productoAgregado = { ...item, cantidad };
-    setCarrito([...carrito, productoAgregado]);
+  const { addProduct, carrito } = useContext(CartContext);
+  const onAdd = (count) => {
+    addProduct({ ...product, quantity: count });
   };
+  console.log(carrito);
   return (
     <div className="detail-container">
       <div className="div-head-detail">
@@ -31,9 +31,7 @@ const ItemDetail = (product) => {
       <p className="description-detail">{product.item.description}</p>
       <hr />
       <ItemCount initial={product.item.initial} stock={product.item.stock} />
-      <Link onClick={agregarProductoCarrito} className="btn-comprar-detail">
-        Comprar
-      </Link>
+      <Link className="btn-comprar-detail">Comprar</Link>
     </div>
   );
 };
