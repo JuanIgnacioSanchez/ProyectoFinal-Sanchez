@@ -1,15 +1,17 @@
-import React, { useContext } from "react";
+import { useContext, useState } from "react";
 import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
 import { Link } from "react-router-dom";
-import CartContext from "../../../context/CartContext";
+import { CartContext } from "../../../context/CartContext";
 
 const ItemDetail = (product) => {
-  const { addProduct, carrito } = useContext(CartContext);
-  const onAdd = (count) => {
-    addProduct({ ...product, quantity: count });
+  const { agregarAlCarrito } = useContext(CartContext);
+  const [contador, setContador] = useState(1);
+
+  const updateContador = (count) => {
+    setContador(count);
   };
-  console.log(carrito);
+
   return (
     <div className="detail-container">
       <div className="div-head-detail">
@@ -17,7 +19,7 @@ const ItemDetail = (product) => {
           ◁
         </Link>
         <div className="div-title-detail">
-          <h2 className="title-detail">{product.item.name}</h2>
+          <h2 className="title-detail">{product.item.shortname}</h2>
         </div>
       </div>
       <hr />
@@ -30,8 +32,17 @@ const ItemDetail = (product) => {
       <hr />
       <p className="description-detail">{product.item.description}</p>
       <hr />
-      <ItemCount initial={product.item.initial} stock={product.item.stock} />
-      <Link className="btn-comprar-detail">Comprar</Link>
+      <ItemCount
+        initial={product.item.initial}
+        stock={product.item.stock}
+        onUpdate={updateContador}
+      />
+      <Link
+        onClick={() => agregarAlCarrito(product.item, contador)}
+        className="btn-comprar-detail"
+      >
+        Comprar
+      </Link>
     </div>
   );
 };

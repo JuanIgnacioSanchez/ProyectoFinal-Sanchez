@@ -19,9 +19,6 @@ const NavBar = () => {
             <Link className="nav-links" to="/">
               Inicio
             </Link>
-            <Link className="nav-links" to="#">
-              Nosotros
-            </Link>
             <NavDropdown
               className="nav-links"
               title="Productos"

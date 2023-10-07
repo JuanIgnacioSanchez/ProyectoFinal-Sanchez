@@ -1,19 +1,73 @@
-import { createContext, useState } from "react";
-import React from "react";
+import React, { createContext, useEffect, useState } from "react";
 
-const CartContext = createContext([]);
+export const CartContext = createContext([]);
 
-const CartContextProvider = ({ children }) => {
-  const [carrito, setCarrito] = useState([]);
+const carritoInicial = JSON.parse(localStorage.getItem("carrito")) || [];
 
-  const addProduct = (newProduct) => {
-    setCarrito([...carrito, newProduct]);
+export const CartProvider = ({ children }) => {
+  const [carrito, setCarrito] = useState(carritoInicial);
+
+  const agregarAlCarrito = (product, count) => {
+    const newProduct = { ...product, cantidad: count };
+    const newCart = [...carrito];
+    const index = newCart.findIndex((item) => item.id === newProduct.id);
+    if (count <= product.stock) {
+      const newCart = [...carrito];
+      const index = newCart.findIndex((item) => item.id === newProduct.id);
+
+      if (index !== -1) {
+        newCart[index].cantidad += count;
+      } else {
+        newCart.push(newProduct);
+      }
+
+      setCarrito(newCart);
+    } else {
+      alert("No hay suficiente stock disponible.");
+    }
   };
+
+  const cantidadEnCarrito = () => {
+    return carrito.reduce((acc, product) => acc + product.cantidad, 0);
+  };
+
+  const disminuirCantidad = (productId) => {
+    const productoSeleccionado = carrito.find(
+      (product) => product.id === productId
+    );
+
+    if (productoSeleccionado && productoSeleccionado.cantidad > 1) {
+      productoSeleccionado.cantidad -= 1;
+      setCarrito([...carrito]);
+    } else {
+      const index = carrito.findIndex(
+        (product) => product.id === productoSeleccionado.id
+      );
+      const nuevoCarrito = [...carrito];
+      nuevoCarrito.splice(index, 1);
+      setCarrito(nuevoCarrito);
+    }
+  };
+
+  const vaciarCarrito = () => {
+    setCarrito([]);
+  };
+
+  useEffect(() => {
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+  }, [carrito]);
+
   return (
-    <CartContext.Provider value={{ carrito, addProduct }}>
+    <CartContext.Provider
+      value={{
+        carrito,
+        agregarAlCarrito,
+        cantidadEnCarrito,
+        vaciarCarrito,
+        disminuirCantidad,
+      }}
+    >
       {children}
     </CartContext.Provider>
   );
 };
-
-export default CartContextProvider;

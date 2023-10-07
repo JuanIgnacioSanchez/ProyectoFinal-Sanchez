@@ -5,25 +5,26 @@ import ItemListContainer from "./components/Container/ItemListContainer/ItemList
 import ItemDetailContainer from "./components/Container/ItemDetailContainer/ItemDetailContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Cart from "./components/Container/Cart/Cart";
-import { useContext } from "react";
-import CartContextProvider from "./context/CartContext";
+import { CartProvider } from "./context/CartContext";
+import Validation from "./components/Container/Validation/Validation";
+import PurchaseDetails from "./components/Container/PurchaseDetails/PurchaseDetails";
 
 function App() {
-  const context = useContext(CartContextProvider);
-
   return (
     <div>
-      <BrowserRouter>
-        <CartContextProvider>
+      <CartProvider>
+        <BrowserRouter>
           <NavBar />
           <Routes>
             <Route path="/" element={<ItemListContainer />} />
             <Route path="/item/:id" element={<ItemDetailContainer />} />
             <Route path="/category/:cat" element={<ItemListContainer />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/validation" element={<Validation />} />
+            <Route path="/purchase" element={<PurchaseDetails />} />
           </Routes>
-        </CartContextProvider>
-      </BrowserRouter>
+        </BrowserRouter>
+      </CartProvider>
     </div>
   );
 }
