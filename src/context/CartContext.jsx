@@ -1,4 +1,5 @@
 import React, { createContext, useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 export const CartContext = createContext([]);
 
@@ -6,6 +7,11 @@ const carritoInicial = JSON.parse(localStorage.getItem("carrito")) || [];
 
 export const CartProvider = ({ children }) => {
   const [carrito, setCarrito] = useState(carritoInicial);
+
+  const totalCarrito = carrito.reduce(
+    (acc, product) => acc + product.price * product.cantidad,
+    0
+  );
 
   const agregarAlCarrito = (product, count) => {
     const newProduct = { ...product, cantidad: count };
@@ -17,8 +23,30 @@ export const CartProvider = ({ children }) => {
 
       if (index !== -1) {
         newCart[index].cantidad += count;
+        toast(
+          `Se ha agregado ${newProduct.cantidad} ${newProduct.shortname} al carrito `,
+          {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+          }
+        );
       } else {
         newCart.push(newProduct);
+        toast(
+          `Se ha agregado ${newProduct.cantidad} ${newProduct.shortname} al carrito `,
+          {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+          }
+        );
       }
 
       setCarrito(newCart);
@@ -51,6 +79,14 @@ export const CartProvider = ({ children }) => {
 
   const vaciarCarrito = () => {
     setCarrito([]);
+    toast(`Se ha vaciado el carrito `, {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+    });
   };
 
   useEffect(() => {
@@ -65,6 +101,7 @@ export const CartProvider = ({ children }) => {
         cantidadEnCarrito,
         vaciarCarrito,
         disminuirCantidad,
+        totalCarrito,
       }}
     >
       {children}

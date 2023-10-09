@@ -2,14 +2,12 @@ import React, { useContext } from "react";
 import "./Cart.css";
 import { CartContext } from "../../../context/CartContext";
 import { Link } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 
 const Cart = () => {
-  const { carrito, vaciarCarrito, disminuirCantidad } = useContext(CartContext);
+  const { carrito, vaciarCarrito, disminuirCantidad, totalCarrito } =
+    useContext(CartContext);
   const carritoVacio = carrito.length === 0;
-  const totalCarrito = carrito.reduce(
-    (acc, product) => acc + product.price * product.cantidad,
-    0
-  );
   const handleDisminuirCantidad = (productId) => {
     disminuirCantidad(productId);
   };
@@ -65,6 +63,7 @@ const Cart = () => {
           </div>
         </>
       )}
+      <ToastContainer />
     </div>
   );
 };

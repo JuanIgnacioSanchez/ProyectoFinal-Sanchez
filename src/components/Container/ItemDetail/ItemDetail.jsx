@@ -3,6 +3,7 @@ import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../../context/CartContext";
+import { ToastContainer } from "react-toastify";
 
 const ItemDetail = (product) => {
   const { agregarAlCarrito } = useContext(CartContext);
@@ -43,6 +44,7 @@ const ItemDetail = (product) => {
       >
         Comprar
       </Link>
+      <ToastContainer />
     </div>
   );
 };

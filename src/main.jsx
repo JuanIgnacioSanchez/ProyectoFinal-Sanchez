@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import { initeFirebase } from "./firebase/data.js";
+import "toastify-js/src/toastify.css";
 
 initeFirebase();
 
