@@ -5,7 +5,7 @@ import "./components/Container/Item/Item.css";
 import "./components/Container/ItemCount/ItemCount.css";
 import "./components/Container/ItemDetail/ItemDetail.css";
 import "./components/Container/ItemList/ItemList.css";
-import "./components/Container/ItemListContainer.css";
+import "./components/Container/ItemListContainer/ItemListContainer.css";
 import "./components/Container/Validation/validation.css";
 import NavBar from "./components/NavBar/NavBar";
 import "bootstrap/dist/css/bootstrap.min.css";
