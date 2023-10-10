@@ -10,4 +10,4 @@ Currently, two official plugins are available:
 # PreEntrega2Sanchez
 
 Librerias ocupadas: Toastify v1.12.0 | react-rooter-dom v1.10.5 | Bootstrap v5.3.2.
-Deploy en Netlify:
+Deploy in Netlify: https://6524c2cbd2f2be00086862fb--cozy-chaja-e992ef.netlify.app
